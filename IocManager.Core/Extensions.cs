@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using System.Text;
 
-namespace IocManagerCore
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class Extensions
     {

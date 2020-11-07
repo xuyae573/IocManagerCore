@@ -1,4 +1,4 @@
-﻿namespace IocManagerCore
+﻿namespace Microsoft.Extensions.DependencyInjection
 {
     public interface IIocManager
     { 

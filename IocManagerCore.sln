@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IocManagerCore", "IocManage
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.csproj", "{F137CB73-037B-4B4D-9C70-303E448E935C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Extensions", "AspNetCore.Extensions\AspNetCore.Extensions.csproj", "{7B5EA902-3E58-4D82-B1B4-BF1EA199AC51}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{F137CB73-037B-4B4D-9C70-303E448E935C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F137CB73-037B-4B4D-9C70-303E448E935C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F137CB73-037B-4B4D-9C70-303E448E935C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B5EA902-3E58-4D82-B1B4-BF1EA199AC51}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B5EA902-3E58-4D82-B1B4-BF1EA199AC51}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B5EA902-3E58-4D82-B1B4-BF1EA199AC51}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B5EA902-3E58-4D82-B1B4-BF1EA199AC51}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

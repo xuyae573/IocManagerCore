@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace IocManagerCore
+namespace Microsoft.Extensions.DependencyInjection
 {
     public interface ILifetime { }
    

@@ -1,4 +1,4 @@
-﻿using IocManagerCore;
+﻿using Microsoft.Extensions.DependencyInjection;
 
 namespace Example
 {

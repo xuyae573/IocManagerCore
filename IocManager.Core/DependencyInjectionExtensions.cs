@@ -1,14 +1,12 @@
-﻿using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Linq;
 using System.Reflection;
 
-namespace IocManagerCore
+namespace Microsoft.Extensions.DependencyInjection
 {
     public static class DependencyInjectionExtensions
     {
-        
         #region .NET CORE DI
         public static IServiceCollection RegisterAssemblyByConvention(this IServiceCollection services, params Assembly[] assemblies)
         {
@@ -57,12 +55,7 @@ namespace IocManagerCore
             throw new ArgumentOutOfRangeException($"Provided ServiceLifetime type is invalid. Lifetime:{type.Name}");
         }
         #endregion
-        public static void UseIocManager(this IApplicationBuilder app)
-        {
-            IocManager.Instance.SetApplicationServiceProvider(app.ApplicationServices.GetService<IServiceProvider>());
-            //IocManager.Instance.AutofacContainer = app.ApplicationServices.GetAutofacRoot();
-        }
-
+    
         public static void AddIocManager(this IServiceCollection services)
         {
             services.AddSingleton<IIocManager, IocManager>(provide =>

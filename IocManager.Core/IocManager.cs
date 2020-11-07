@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
 using System;
 
-namespace IocManagerCore
+namespace Microsoft.Extensions.DependencyInjection
 {
     public class IocManager : IIocManager
     {
