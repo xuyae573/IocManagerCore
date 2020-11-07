@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IocManager.Core\IocManager.Core.csproj" />
+    <ProjectReference Include="..\IocManager.Core\IocManagerCore.csproj" />
   </ItemGroup>
 
 </Project>

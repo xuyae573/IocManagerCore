@@ -1,8 +1,5 @@
-﻿using Autofac;
-using Microsoft.Extensions.DependencyInjection;
+﻿using Microsoft.Extensions.DependencyInjection;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace IocManagerCore
 {
@@ -10,9 +7,7 @@ namespace IocManagerCore
     {
         public static IocManager Instance => InstanceLazy.Value;
 
-       // public ILifetimeScope AutofacContainer { get; set; }
-
-
+   
         private static readonly Lazy<IocManager> InstanceLazy = new Lazy<IocManager>(() => new IocManager());
 
         private IServiceProvider _provider;
@@ -27,11 +22,6 @@ namespace IocManagerCore
         {
 
         }
-
-        //public TService Resolve<TService>()
-        //{
-        //    return AutofacContainer.Resolve<TService>();
-        //}
 
         public TService GetService<TService>()
         {
