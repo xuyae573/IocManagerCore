@@ -5,7 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AspNetCore.Extensions\AspNetCore.Extensions.csproj" />
+    <ProjectReference Include="..\AspNetCore.Extensions\Microsoft.AspNetCore.Builder.IocManager.csproj" />
   </ItemGroup>
 
 </Project>

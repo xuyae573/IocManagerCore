@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.Depend
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.csproj", "{F137CB73-037B-4B4D-9C70-303E448E935C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AspNetCore.Extensions", "AspNetCore.Extensions\AspNetCore.Extensions.csproj", "{7B5EA902-3E58-4D82-B1B4-BF1EA199AC51}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.AspNetCore.Builder.IocManager", "AspNetCore.Extensions\Microsoft.AspNetCore.Builder.IocManager.csproj", "{7B5EA902-3E58-4D82-B1B4-BF1EA199AC51}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
