@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30621.155
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IocManagerCore", "IocManager.Core\IocManagerCore.csproj", "{1C62BD69-5060-4560-981E-6FDC56C6FE43}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Extensions.DependencyInjection.IocManager", "IocManager.Core\Microsoft.Extensions.DependencyInjection.IocManager.csproj", "{1C62BD69-5060-4560-981E-6FDC56C6FE43}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Example", "Example\Example.csproj", "{F137CB73-037B-4B4D-9C70-303E448E935C}"
 EndProject

@@ -1,5 +1,4 @@
-﻿using Microsoft.Extensions.DependencyInjection;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
 
@@ -18,7 +17,7 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 RegisterDependenciesByAssembly<ISingletonDependency>(services, assembly);
                 RegisterDependenciesByAssembly<ITransientDependency>(services, assembly);
-                RegisterDependenciesByAssembly<ILifetimeScopeDependency>(services, assembly);
+                RegisterDependenciesByAssembly<IScopedDependency>(services, assembly);
             }
             return services;
         }
@@ -47,7 +46,7 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 return ServiceLifetime.Transient;
             }
-            if (type == typeof(ILifetimeScopeDependency))
+            if (type == typeof(IScopedDependency))
             {
                 return ServiceLifetime.Scoped;
             }

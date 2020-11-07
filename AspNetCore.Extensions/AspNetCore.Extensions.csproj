@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\IocManager.Core\IocManagerCore.csproj" />
+    <ProjectReference Include="..\IocManager.Core\Microsoft.Extensions.DependencyInjection.IocManager.csproj" />
   </ItemGroup>
 
 </Project>
