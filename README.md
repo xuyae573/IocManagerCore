@@ -65,21 +65,21 @@ public class DefaultGreetingService : IGreetingService, IScopedDependency
 ```
 
 Startup Configuration
+```C#
+
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddControllersWithViews();
+
+    services.AddIocManager();
+}
 ```
 
-        public void ConfigureServices(IServiceCollection services)
-        {
-            services.AddControllersWithViews();
+```C#
 
-            services.AddIocManager();
-        }
-```
-
-```
-
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
-        {
-           .....
-           app.UseIocManager();
-        }
+public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+{
+   .....
+   app.UseIocManager();
+}
 ```
