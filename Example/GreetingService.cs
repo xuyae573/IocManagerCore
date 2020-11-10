@@ -1,20 +1,12 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Linq;
 
 namespace Example
 {
-    public class DefaultGreetingService : IGreetingService, ISingletonDependency
+    public class GreetingService : DefaultGreetingService, ITransientDependency
     {
-        public string OperationId { get; set; }
-
-        public DefaultGreetingService()
+        public override string SayHello()
         {
-            OperationId = Guid.NewGuid().ToString()[^4..];
-        }
-        public string SayHello()
-        {
-           return $"Operation ID: {OperationId}";
+            return $"GreetingService Operation ID: {OperationId}";
         }
     }
 }
