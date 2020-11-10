@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public interface ISingletonDependency: ILifetime
+    public interface ISingletonDependency
     {
     }
 }

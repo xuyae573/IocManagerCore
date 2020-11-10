@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
@@ -27,11 +28,13 @@ namespace Microsoft.Extensions.DependencyInjection
             var types = assembly.GetTypes().Where(x => typeof(TServiceLifetime).GetTypeInfo().IsAssignableFrom(x) && x.GetTypeInfo().IsClass && !x.GetTypeInfo().IsAbstract && !x.GetTypeInfo().IsSealed).ToList();
             foreach (var type in types)
             {
-                var itype = type.GetTypeInfo().GetInterfaces().FirstOrDefault(x => x.Name.ToUpper().Contains(type.Name.ToUpper()));
-                if (itype != null)
+                foreach (var interfaceType in GetDefaultServices(type))
                 {
-                    var serviceLifetime = FindServiceLifetime(typeof(TServiceLifetime));
-                    services.Add(new ServiceDescriptor(itype, type, serviceLifetime));
+                    if (interfaceType != null)
+                    {
+                        var serviceLifetime = FindServiceLifetime(typeof(TServiceLifetime));
+                        services.Add(new ServiceDescriptor(interfaceType, type, serviceLifetime));
+                    }
                 }
             }
         }
@@ -61,6 +64,31 @@ namespace Microsoft.Extensions.DependencyInjection
             {
                 return IocManager.Instance;
             });
+
+            var assemblies = AppDomain.CurrentDomain.GetAssemblies();
+            services.RegisterAssemblyByConvention(assemblies);
+        }
+
+        private static List<Type> GetDefaultServices(Type type)
+        {
+            var serviceTypes = new List<Type>();
+
+            foreach (var interfaceType in type.GetTypeInfo().GetInterfaces())
+            {
+                var interfaceName = interfaceType.Name;
+
+                if (interfaceName.StartsWith("I"))
+                {
+                    interfaceName = interfaceName.Substring(1, interfaceName.Length - 1);
+                }
+
+                if (type.Name.EndsWith(interfaceName))
+                {
+                    serviceTypes.Add(interfaceType);
+                }
+            }
+
+            return serviceTypes;
         }
     }
 }

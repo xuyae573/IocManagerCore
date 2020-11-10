@@ -2,7 +2,7 @@
 
 namespace Example
 {
-    public interface IGreetingService : ISingletonDependency
+    public interface IGreetingService 
     {
         string OperationId { get; set; }
         string SayHello();

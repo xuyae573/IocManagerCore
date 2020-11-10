@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Microsoft.Extensions.DependencyInjection
 {
-    public interface ITransientDependency : ILifetime
+    public interface ITransientDependency 
     {
     }
 }

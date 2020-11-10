@@ -1,20 +1,20 @@
-﻿using System;
+﻿using Microsoft.Extensions.DependencyInjection;
+using System;
 using System.Linq;
 
 namespace Example
 {
-    public class GreetingService : IGreetingService
+    public class DefaultGreetingService : IGreetingService, ISingletonDependency
     {
         public string OperationId { get; set; }
 
-        public GreetingService()
+        public DefaultGreetingService()
         {
             OperationId = Guid.NewGuid().ToString()[^4..];
         }
         public string SayHello()
         {
-            var faces = typeof(IGreetingService).GetInterfaces().FirstOrDefault();
-           return $"{faces.Name} - guid: {OperationId}";
+           return $"Operation ID: {OperationId}";
         }
     }
 }
