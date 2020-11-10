@@ -2,6 +2,12 @@
 
 Using a convention way to register the Service 
 
+The rule of Service and Interface naming Convention as below
+
+XXXXXService: IService
+
+The implementation type name must endwith interface's name except the 'I'
+
 for example
 
 Singleton 
