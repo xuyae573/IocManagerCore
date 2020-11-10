@@ -8,7 +8,7 @@ XXXXXService: IService
 
 The implementation type name must endwith interface's name except the 'I'
 
-for example
+## For Example
 
 Singleton 
 ```C#
